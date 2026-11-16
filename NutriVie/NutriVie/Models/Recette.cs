@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace NutriVie.Models
 {
@@ -18,7 +19,8 @@ namespace NutriVie.Models
         public string? Image { get; set; }
 
         public int CategorieId { get; set; }
-        public Categorie Categorie { get; set; }
+        [ValidateNever]
+        public virtual Categorie Categorie { get; set; }
 
     }
 }

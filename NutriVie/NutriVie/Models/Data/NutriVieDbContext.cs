@@ -8,7 +8,7 @@ namespace NutriVie.Models.Data
         public DbSet<NutriVie.Models.Recette> Recette { get; set; } = default!;
         public DbSet<NutriVie.Models.Categorie> Categorie { get; set; } = default!;
         public NutriVieDbContext(DbContextOptions<NutriVieDbContext> options) : base(options)
-        { 
+        {
         }
         public DbSet<Service> Services { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
